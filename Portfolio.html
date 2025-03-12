@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sassy Station - Nail Artist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="Portfolio1.jpg" alt="Portfolio Item 1">
+            <h3>Nail Art Design 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="Portfolio2.jpg" alt="Portfolio Item 2">
+            <h3>Nail Art Design 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="Portfolio3.jpg" alt="Portfolio Item 3">
+            <h3>Nail Art Design 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+    </div>
+</section>
+
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+        
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+        
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                show Slide(currentSlide);
+            }
+        
+            setInterval(nextSlide, 3000);
+        
+            showSlide(currentSlide);
+        </script>
+
+    </main>
+
+    <footer>
+        <p>Contact us at: 0905 514 7114</p>
+        <p>Follow us on social media: FB | INSTA | TIKTOK</p>
+        <p>&copy; 2023 Sassy Station. All rights reserved.</p>
+    </footer>
+</body>
+</html>
