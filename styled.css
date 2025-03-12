@@ -52,3 +52,9 @@ nav ul li a {
     color: #333;
     margin: 5px 0 0 0; 
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3b9c4;
+}
