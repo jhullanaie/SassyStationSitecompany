@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8d9e3;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #f3b9c4;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+header .logo img {
+    width: 150px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #a03a5d;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+main h1 {
+    color:  #a03a5d;
+}
+
+
+form {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 20px;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="time"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 20px;
+}
+
+
+form input[type="submit"] {
+    background-color: #a03a5d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+form input[type="submit"]:hover {
+    background-color: #a03a5d;
+}
+
+
+footer {
+    background-color: #f3b9c4;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
