@@ -4,7 +4,7 @@ body {
     margin: 0;
 }
 
-header {
+/*header {
     background-color: #f3b9c4;
     padding: 20px;
     text-align: center;
@@ -23,6 +23,41 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #a03a5d;
+}*/
+
+header {
+    background-color: #f3b9c4;
+    padding: 10px; /* Reduced padding to make the header smaller */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between;; /* Space between logo and nav */
+}
+
+.logo{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.logo img {
+    max-height: 80px; /* Set a maximum height for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #a03a5d;
+    font-size: 14px; 
 }
 
 .slider {
@@ -50,20 +85,6 @@ nav ul li a {
 .cta h2 {
     font-size: 24px;
     color: #a03a5d;
-}
-
-.book-button {
-    padding: 10px 20px;
-    background-color: #f3b9c4;
-    color: #a03a5d;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.book-button:hover {
-    background-color: #e3a8b4;
 }
 
 footer {
@@ -131,15 +152,30 @@ footer {
     height: auto;
   }
 
-  .gif-template {
+  .cta {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center items vertically */
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 20px; /* Same padding as location-container */
+    background-color: #f3e5f5; /* Same background color */
+    border-radius: 10px; /* Same border radius */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Same box shadow */
+    width: 80%; /* Ensure it takes full width */
+}
+
+.gif-template {
     position: relative;
     text-align: center;
-    margin: 20px 0;
+    width: 90%; /* Set to 90% of the parent width */
+    margin: 0; /* Remove margin */
+    padding: 10px; /* Optional: Add padding for spacing */
 }
 
 .gif-template img {
-    max-width: 100%; /* Ensures the GIF is responsive */
-    height: auto;    /* Maintains aspect ratio */
+    width: 100%; /* Set the image to take full width of the template */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add border radius to the image */
 }
 
 .gif-text {
@@ -147,10 +183,71 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px; /* Adjust font size as needed */
-    color: white;    /* Change text color as needed */
+    font-size: 24px; 
+    color: white;   
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.gif-template a {
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure it behaves like a block for better click area */
+}
+
+.location-container {
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    margin: 20px; 
+    padding: 20px; 
+    background-color: #f3e5f5; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.map-view {
+    flex: 1; 
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.content {
+    flex: 1; 
+    text-align: center;
+}
+
+.map-view h1,.content h2 {
+    color: #a03a5d;
+}
+
+.contact-us {
+    text-align: center;
+    margin: 20px 0;
+    color: #a03a5d;
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    margin: 20px; 
+    padding: 20px; 
+    background-color: #f3e5f5; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
 }
 
 #nail-services {
