@@ -1,0 +1,65 @@
+.portfolio-grid {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    margin: 0 auto; /* Center the grid */
+    max-width: 1200px; /* Set a maximum width for the grid */
+}
+
+.portfolio-item {
+    flex: 1 1 30%; /* Allow items to grow and shrink, with a base width of 30% */
+    margin: 10px; /* Add margin for spacing */
+    max-width: 300px; /* Set a maximum width for each item */
+    position: relative; /* Position relative for overlay positioning */
+}
+
+.image-container {
+    position: relative; /* Position relative for overlay positioning */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    border-radius: 10px; /* Optional: Add border radius */
+    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+}
+
+.image-container img {
+    width: 100%; /* Make image responsive */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+.overlay {
+    position: absolute; /* Position overlay absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 192, 203, 0.7); /* Pinkish hue with transparency */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.portfolio {
+    font-size: 36px; /* Increase font size */
+    color: #a03a5d; /* Set a color that matches your theme */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add space below the header */
+    position: relative; /* Position for pseudo-elements */
+}
+
+.portfolio::after {
+    content: ""; /* Create a pseudo-element */
+    display: block; /* Make it a block element */
+    width: 50%; /* Set width of the underline */
+    height: 4px; /* Set height of the underline */
+    background-color: #f3b9c4; /* Color of the underline */
+    margin: 10px auto; /* Center the underline */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}

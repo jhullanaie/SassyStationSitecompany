@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Sassy Station</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Review.css">
+
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="Logo.png" alt="Sassy Station Logo">
+            <img src="ImagesAndStuff/Logo.png" alt="Sassy Station Logo">
         </div>
         <nav>
             <ul>
@@ -26,7 +28,30 @@
     </header>
 
     <main>
-        <section id="reviews">
+        <section id="reviews" class="reviews">
+            <h2 class="reviews-header">Testimonials</h2>
+            <div class="review-container"> <!-- New container for the border -->
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="ImagesAndStuff/Review1.png" alt="Review 1">
+                            <h4>- Princess Patacsil</h4>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="ImagesAndStuff/Review2.png" alt="Review 2">
+                            <h4>- Customer 2</h4>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="ImagesAndStuff/Review3.png" alt="Review 3">
+                            <p>"Amazing experience! Will definitely come back!"</p>
+                            <h4>- Customer 3</h4>
+                        </div>
+                        <!-- Add more reviews as needed -->
+                    </div>
+                    <button class="carousel-control left" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-control right" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -34,5 +59,6 @@
         <p>&copy; 2023 Sassy Station. All rights reserved.</p>
         <ul><li><a href="#contact">Contact Us</a></li></ul>
     </footer>
+    <script src="Review.js"></script>
 </body>
 </html>

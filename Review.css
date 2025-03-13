@@ -1,0 +1,69 @@
+.reviews {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.reviews-header {
+    font-size: 36px;
+    color: #a03a5d;
+    margin-bottom: 20px;
+}
+
+.review-container {
+    border: 5px solid #d1a3b5; /* Darker shade of the background color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Space inside the border */
+    background-color: #fff; /* Background color for contrast */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px; /* Set a max width for the carousel */
+    margin: 0 auto; /* Center the carousel */
+    overflow: hidden; /* Hide overflow */
+}
+
+.carousel-inner {
+    display: flex; /* Use flexbox for horizontal layout */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-item {
+    min-width: 100%; /* Each item takes full width */
+    box-sizing: border-box; /* Include padding and border in width */
+    text-align: center; /* Center text */
+}
+
+.carousel-item img {
+    width: 100%; /* Make image responsive */
+    border-radius: 10px; /* Optional: Add border radius to images */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #a03a5d;
+    border-radius: 50%; /* Round buttons */
+    z-index: 10; /* Ensure buttons are above other elements */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 192, 203, 0.8); /* Change background on hover */
+}
+
+.carousel-control.left {
+    left: 10px; /* Position left button */
+}
+
+.carousel-control.right {
+    right: 10px; /* Position right button */
+}

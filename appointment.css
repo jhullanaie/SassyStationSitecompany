@@ -105,3 +105,29 @@ footer {
     padding: 20px;
     background-color: #f3b9c4;
 }
+
+
+.confirmation-container {
+    text-align: center; /* Center text and inline elements */
+    background-color: white; /* Background for the confirmation box */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+.back-button {
+    display: inline-block; /* Make it behave like a block element */
+    background-color: #a03a5d; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the button */
+}
+
+.back-button:hover {
+    background-color: #8c2e4d; /* Darker shade on hover */
+}
