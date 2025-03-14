@@ -209,6 +209,15 @@ footer {
     flex: 1; 
     margin-left: 20px;
     margin-right: 10px;
+    text-align: center;
+    padding: 0 10px; /* Add padding to ensure it fits within the container */
+}
+
+.map-view iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure the iframe does not exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .content {
@@ -315,4 +324,5 @@ footer {
 
 .center-text {
     text-align: center;
+    margin-top: 10px; /* Adjust the margin as needed */
 }
