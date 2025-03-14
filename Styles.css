@@ -307,39 +307,71 @@ footer ul li a {
 }
 
 #nail-services {
+    position: relative;
     padding: 20px;
-    background-color:hsl(60, 100%, 97%);
-    border-radius: 10px; 
+    background-color: #f4f4f4;
+    border-radius: 10px;
     margin: 20px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border: 10px solid; 
+    overflow: hidden;
 }
 
-#nail-services h2 {
-    font-size: 28px;
-    color: #a03a5d;
-    margin-bottom: 15px; 
-    text-align: center;
+.service-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-#nail-services h3 {
-    font-size: 24px;
-    color: #a03a5d;
-    margin-top: 15px; 
-    margin-bottom: 5px; 
+.service-images img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    opacity: 0.8;
+    transition: transform 0.3s;
 }
 
-#nail-services p {
-    font-size: 18px;
-    color: #333;
-    margin: 5px 0; 
-    line-height: 1.5; 
+.service-images img:nth-child(1) {
+    top: 5%;
+    left: 5%;
 }
 
-#nail-services .faq-item:hover {
-    background-color: #e3a8b4; 
-    transition: background-color 0.3s;
+.service-images img:nth-child(2) {
+    top: 20%;
+    right: 10%;
+}
+
+.service-images img:nth-child(3) {
+    top: 40%;
+    left: 15%;
+}
+
+.service-images img:nth-child(4) {
+    top: 60%;
+    right: 15%;
+}
+
+.service-images img:nth-child(5) {
+    bottom: 20%;
+    left: 10%;
+}
+
+.service-images img:nth-child(6) {
+    bottom: 10%;
+    right: 5%;
+}
+
+.service-images img:nth-child(7) {
+    bottom: 30%;
+    left: 40%;
+}
+
+.service-images img:hover {
+    transform: scale(1.1);
 }
 
 #faqs {
