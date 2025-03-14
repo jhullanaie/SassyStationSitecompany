@@ -89,8 +89,26 @@ nav ul li a {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0; 
     background-color: #f3b9c4;
+}
+
+/* added aria*/
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px; 
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: inherit; 
 }
 
 .slider {
@@ -210,14 +228,14 @@ footer {
     margin-left: 20px;
     margin-right: 10px;
     text-align: center;
-    padding: 0 10px; /* Add padding to ensure it fits within the container */
+    padding: 0 10px; 
 }
 
 .map-view iframe {
     display: block;
     margin: 0 auto;
-    max-width: 100%; /* Ensure the iframe does not exceed the container's width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
 
 .content {
@@ -324,5 +342,5 @@ footer {
 
 .center-text {
     text-align: center;
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 10px; 
 }

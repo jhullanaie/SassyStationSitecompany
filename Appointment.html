@@ -30,8 +30,8 @@
         <form id="appointment-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" pattern="^(09|\+639)\d{9}$" required><br><br>
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" required><br><br>
             <label for="time">Time:</label>
@@ -40,16 +40,12 @@
         </form>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Sassy Station. All rights reserved.</p>
-    </footer>
-
     <script>
         document.getElementById('appointment-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            const number = document.getElementById('number').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
 
@@ -58,7 +54,7 @@
                     <h1 style="color: #a03a5d;">Booking Successful!</h1>
                     <p>You have successfully booked an appointment.</p>
                     <p style="color: #a03a5d;"><strong>Name:</strong> ${name}</p>
-                    <p style="color: #a03a5d;"><strong>Email:</strong> ${email}</p>
+                    <p style="color: #a03a5d;"><strong>Number:</strong> ${number}</p>
                     <p style="color: #a03a5d;"><strong>Date:</strong> ${date}</p>
                     <p style="color: #a03a5d;"><strong>Time:</strong> ${time}</p>
                     <a href="Appointment.html" class="back-button">Back to Appointment Form</a>
@@ -68,5 +64,10 @@
             document.body.innerHTML = confirmationMessage;
         });
     </script>
+
+    <footer>
+        <p>&copy; 2023 Sassy Station. All rights reserved.</p>
+        <ul><li><a href="#contact-us">Contact Us</a></li></ul>
+    </footer>
 </body>
 </html>
