@@ -13,7 +13,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="Sassy Station.html">Home</a></li> 
+                <li><a href="Sassy Station.html">Home</a></li>
                 <li><a href="Appointment.html">Appointment</a></li>
                 <li><a href="Services.html">Services</a></li>
                 <li><a href="Sassy Station.html#location">Location</a></li>
@@ -40,7 +40,7 @@
 
         <section class="cta">
             <div class="gif-template">
-                <a href="Appointment.html"> <!-- Wrap the image and text in the anchor tag -->
+                <a href="Appointment.html"> 
                     <img src="ImagesAndStuff/BookNow.gif" alt="Book Now Template"> 
                     <div class="gif-text">BOOK NOW</div> 
                 </a>
@@ -50,13 +50,11 @@
         <script>
             let currentSlide = 0;
             const slides = document.querySelectorAll('.slide');
-        
             function showSlide(index) {
                 slides.forEach((slide, i) => {
                     slide.classList.toggle('active', i === index);
                 });
             }
-        
             function nextSlide() {
                 currentSlide = (currentSlide + 1) % slides.length;
                 showSlide(currentSlide);
@@ -67,20 +65,17 @@
             showSlide(currentSlide);
         </script>
 
-
         <div class="location-container"> 
             <section class="map-view" id="location">
                 <h1>Visit us at our location!</h1>
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153165!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f3b3%3A0x5045675218ceed0!2s191%20MacArthur%20Hwy%2C%20Bauang%2C%20La%20Union!5e0!3m2!1sen!2sph!4v1616161616161!5m2!1sen!2sph" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153165!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f3b3%3A0x5045675218ceed0!2s191%20MacArthur%20Hwy%2C%20Bauang%2C%20La%20Union!5e0!3m2!1sen!2sph!4v1616161616161!5m2!1sen!2sph"  
                     width="400" 
                     height="300" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy">
                 </iframe>
-            </section>
-            <section class="content">
                 <div class="center-text">
                     <p>191 MacArthur Hwy, Bauang, La Union</p>
                 </div>
