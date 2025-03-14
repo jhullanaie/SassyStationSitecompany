@@ -46,15 +46,13 @@
 
     <script>
         document.getElementById('appointment-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
 
-            // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
 
-            // Create a confirmation message
             const confirmationMessage = `
                 <div class="confirmation-container">
                     <h1 style="color: #a03a5d;">Booking Successful!</h1>
@@ -67,7 +65,6 @@
                 </div>
             `;
 
-            // Display the confirmation message
             document.body.innerHTML = confirmationMessage;
         });
     </script>
