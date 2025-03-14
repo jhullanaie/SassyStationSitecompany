@@ -41,24 +41,6 @@ nav ul li {
     position: relative;
 }
 
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f3b9c4;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000; 
-}
-
-nav ul li:hover .dropdown {
-    display: block;
-}
-
-nav ul li .dropdown li {
-    display: block; 
-    margin: 5px 0; 
-}
-
 nav ul li a {
     text-decoration: none;
     color: #a03a5d;
@@ -160,15 +142,6 @@ nav ul li:not(:last-child)::after {
         border-radius: 15px;
         background-color: #f3b9c4;
     }
-}
-
-.arrow {
-    cursor: pointer; 
-    margin-left: 5px; 
-}
-
-.arrow.active {
-    transform: rotate(180deg); 
 }
 
 .slider {
@@ -391,58 +364,23 @@ footer ul li a {
     height: 100%;
 }
 
-.service-images img {
-    width: 100px;
-    height: auto;
-    border-radius: 8px;
-    position: absolute;
-    opacity: 0.8;
-    transition: transform 0.3s;
+#nail-services h3 {
+    font-size: 24px;
+    color: #a03a5d;
+    margin-top: 15px; 
+    margin-bottom: 5px; 
 }
 
 #nail-services p {
     font-size: 18px;
     color: #333;
     margin: 5px 0; 
-    line-height: 1.5; 
-}
-.service-images img:nth-child(1) {
-    top: 5%;
-    left: 5%;
+line-height: 1.5; 
 }
 
-.service-images img:nth-child(2) {
-    top: 20%;
-    right: 10%;
-}
-
-.service-images img:nth-child(3) {
-    top: 40%;
-    left: 15%;
-}
-
-.service-images img:nth-child(4) {
-    top: 60%;
-    right: 15%;
-}
-
-.service-images img:nth-child(5) {
-    bottom: 20%;
-    left: 10%;
-}
-
-.service-images img:nth-child(6) {
-    bottom: 10%;
-    right: 5%;
-}
-
-.service-images img:nth-child(7) {
-    bottom: 30%;
-    left: 40%;
-}
-
-.service-images img:hover {
-    transform: scale(1.1);
+#nail-services .faq-item:hover {
+    background-color: #e3a8b4; 
+    transition: background-color 0.3s;
 }
 
 #faqs {
