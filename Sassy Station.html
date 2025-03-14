@@ -11,17 +11,23 @@
         <div class="logo">
             <img src="ImagesAndStuff/Logo.png" alt="Sassy Station Logo">
         </div>
-        <nav class="web-menu">
-            <div class="bubble-links">
-                <a href="Sassy Station.html" class="bubble-link">Home</a>
-                <a href="Services.html" class="bubble-link">Services</a>
-                <a href="Portfolio.html" class="bubble-link">Portfolio</a>
-                <a href="Sassy Station.html#location" class="bubble-link">Location</a>
-                <a href="Reviews.html" class="bubble-link">Reviews</a>
-                <a href="FAQS.html" class="bubble-link">FAQs</a>
-                <a href="Sassy Station.html#contact-us" class="bubble-link">Contact</a>
-                <a href="Appointment.html" class="bubble-link">BOOK NOW!</a>
-            </div>
+        <nav class = "web-menu">
+            <ul>
+                <li>
+                    <a href="Sassy Station.html">Home</a>
+                    <span class="arrow" onclick="toggleDropdown()">▾</span>
+                    <ul class="dropdown">
+                        <li><a href="Sassy Station.html#location">Location</a></li>
+                        <li><a href="Sassy Station.html#contact-us">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li><a href="Appointment.html">Appointment</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Reviews.html">Reviews</a></li>
+                <li><a href="FAQS.html">FAQs</a></li>
+            </ul>
+        </nav>
     </header>
     <script src="dropdown.js"></script>
 
@@ -53,11 +59,21 @@
         </div>
 
         <section class="cta">
-            <div class="gif-template">
-                <a href="Appointment.html">
-                    <img src="ImagesAndStuff/BookNow.gif" alt="Book Now Template">
-                    <div class="gif-text">BOOK NOW</div>
-                </a>
+            <div class="gif-container">
+                <div class="gif-template side">
+                        <img src="ImagesAndStuff/BookNow.gif" alt="Book Now Template">
+                    </a>
+                </div>
+                <div class="gif-template main">
+                    <a href="Appointment.html">
+                        <img src="ImagesAndStuff/BookNow.gif" alt="Book Now Template">
+                        <div class="gif-text">BOOK NOW</div>
+                    </a>
+                </div>
+                <div class="gif-template side">
+                        <img src="ImagesAndStuff/BookNow.gif" alt="Book Now Template">
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -90,7 +106,7 @@
                 <a href="https://www.tiktok.com/@sassystation" target="_blank">
                     <img src="ImagesAndStuff/Tiktok.png" alt="TikTok" />
                 </a>
-                <a href="tel: 0905 514 7114">
+                <a href="tel:0905 514 7114">
                     <img src="ImagesAndStuff/Phone.jpg" alt="Phone" />
                 </a>
             </div>
@@ -132,3 +148,5 @@
     </script>
 </body>
 </html>
+
+

@@ -6,6 +6,7 @@
 .reviews-header {
     font-size: 36px;
     color: #a03a5d;
+    margin-top: 120px;
     margin-bottom: 20px;
 }
 
@@ -66,4 +67,90 @@
 
 .carousel-control.right {
     right: 10px; 
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #f3b9c4;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mobile Quick Links - 4-3 layout */
+    .mobile-quick-links {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        margin: 0;
+        background-color: #b52249;
+        position: fixed;
+        top: 150px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .mobile-links-row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .mobile-links-row:last-child {
+        margin-bottom: 0;
+        justify-content: center;
+    }
+
+    .mobile-quick-links a {
+        display: inline-block;
+        padding: 8px 0;
+        text-align: center;
+        color: #a03a5d;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #f3b9c4;
+        border-radius: 15px;
+        font-size: 14px;
+    }
+
+    .mobile-links-row:first-child a {
+        width: 23%;
+    }
+
+    .mobile-links-row:last-child a {
+        width: 30%;
+        margin: 0 5px;
+    }
+
+    /* Reviews specific mobile styles */
+    .reviews {
+        padding-top: 140px;
+        margin: 0;
+    }
+
+    .review-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .carousel {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .carousel-control {
+        padding: 8px;
+        font-size: 20px;
+    }
 }
