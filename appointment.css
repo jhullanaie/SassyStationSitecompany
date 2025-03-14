@@ -29,7 +29,7 @@ header {
     height: auto;
 }
 
-nav ul {
+/*nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -44,6 +44,51 @@ nav ul li a {
     text-decoration: none;
     color: #a03a5d;
     font-size: 14px;
+}*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li .dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it below the parent */
+    background-color: #f3b9c4; /* Background color for dropdown */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+nav ul li .dropdown li {
+    display: block; /* Stack dropdown items vertically */
+    margin: 5px 0; /* Space between dropdown items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #a03a5d;
+    font-size: 14px; 
+}
+
+.arrow {
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 5px; /* Space between link and arrow */
+}
+
+.arrow.active {
+    transform: rotate(180deg); /* Rotate arrow when active */
 }
 
 main {

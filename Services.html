@@ -13,22 +13,36 @@
         </div>
         <nav>
             <ul>
-                <li><a href="Sassy Station.html">Home</a></li> 
+                <li>
+                    <a href="Sassy Station.html">Home</a>
+                    <span class="arrow" onclick="toggleDropdown()">▾</span>
+                    <ul class="dropdown">
+                        <li><a href="Sassy Station.html#location">Location</a></li>
+                        <li><a href="Sassy Station.html#contact-us">Contact Us</a></li>
+                    </ul>
+                </li>
                 <li><a href="Appointment.html">Appointment</a></li>
                 <li><a href="Services.html">Services</a></li>
-                <li><a href="Sassy Station.html#location">Location</a></li>
                 <li><a href="Portfolio.html">Portfolio</a></li>
                 <li><a href="Reviews.html">Reviews</a></li>
                 <li><a href="FAQS.html">FAQs</a></li>
-                <li><a href="Sassy Station.html#contact-us">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+    <script src="dropdown.js"></script>
 
     <main>
         <section id="nail-services">
             <h2>Nail Services Menu</h2>
-        
+            <img src="ImagesAndStuff/Bowtie.png" alt="Nail Services" usemap="#services-map" style="max-width: 100%; height: auto;">
+
+            <map name="services-map">
+                <area shape="rect" coords="34,44,270,350" alt="Gel Polish" href="#gel-polish" />
+                <area shape="rect" coords="290,172,333,250" alt="Nail Art" href="#nail-art" />
+                <area shape="rect" coords="337,300,500,400" alt="Extensions" href="#extensions" />
+                <!-- Add more areas as needed -->
+            </map>
+
             <h3>Gel Polish (Natural Nails)</h3>
             <p>💅 ₱450 (Starting Price)</p>
         
