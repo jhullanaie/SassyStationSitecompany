@@ -5,31 +5,39 @@ body {
 }
 
 header {
-    background-color: #f3b9c4;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #f3b9c4; /* Header background color */
+    padding: 10px; /* Padding for the header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and nav */
     width: 100%;
     box-sizing: border-box; 
     flex-wrap: wrap; 
 }
 
 .logo {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 0 20px; /* Margin for the logo */
 }
 
 header .logo img {
-    max-height: 80px; 
-    height: auto;
+    max-height: 80px; /* Set a maximum height for the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Navigation styles */
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for navigation items */
     align-items: center;
     flex-wrap: wrap; 
     position: relative;
@@ -37,89 +45,84 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 15px;
-    position: relative;
+    margin: 0 15px; /* Margin between navigation items */
+    position: relative; /* Position relative for dropdown */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #a03a5d;
+    text-decoration: none; /* Remove underline from links */
+    color: #a03a5d; /* Link color */
     font-size: 22px; 
     font-weight: bold;
     padding: 10px;
 }
 
-nav ul li:not(:last-child)::after {
-    content: '|';
-    color: #a03a5d;
-    margin-left: 15px;
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
+/* Dropdown styles */
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it below the parent */
+    background-color: #f3b9c4; /* Background color for dropdown */
+    padding: 10px; /* Padding for dropdown */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other elements */
 }
 
-/* Mobile Quick Links - Always hidden by default */
-.mobile-quick-links {
-    display: none;
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
 }
 
-/* Menu toggle button - hidden by default */
-.menu-toggle {
-    display: none;
+nav ul li .dropdown li {
+    display: block; /* Stack dropdown items vertically */
+    margin: 5px 0; /* Space between dropdown items */
 }
 
-/* Mobile styles */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .logo {
-        margin: 0 auto 10px auto;
-    }
-
-    /* Show and style the menu toggle */
-    .menu-toggle {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        margin-bottom: 10px;
-        background-color: #f3b9c4;
-        color: #a03a5d;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 24px;
-    }
-
     nav ul {
-        display: none; 
-        flex-direction: column; 
-        width: 100%; 
-        text-align: center; 
+        display: none; /* Hide navigation links by default on mobile */
+        flex-direction: column; /* Stack navigation items vertically */
+        width: 100%; /* Full width for navigation */
+        background-color: #f3b9c4; /* Background color for mobile menu */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+        z-index: 1000; /* Ensure it appears above other elements */
     }
 
-    /* Show navigation when active class is applied */
     nav ul.active {
-        display: flex;
+        display: flex; /* Show navigation links when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    .logo img {
+        max-height: 60px; /* Smaller logo on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0; /* Further reduce margin for mobile */
+    }
+
+    .logo img {
+        max-height: 50px; /* Even smaller logo on mobile */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically on mobile */
+        width: 100%; /* Full width for navigation */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Margin for stacked items */
     }
-
-    nav ul li a {
-        font-size: 18px; 
-        padding: 10px; 
-        display: block;
-    }
-
-    nav ul li:not(:last-child)::after {
-        content: '';
-    }
+}
 
     /* Show and style the mobile quick links */
     .mobile-quick-links {
