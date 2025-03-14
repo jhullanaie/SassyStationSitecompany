@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Sassy Station</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css"> <!-- Link to the new CSS file -->
 </head>
 <body>
     <header>
@@ -32,70 +33,71 @@
     <script src="dropdown.js"></script>
     <script src="lightbox.js"></script>
 
+    <h2 class="center">SERVICES</h2> <!-- Add this line -->
     <main>
-        <section id="nail-services">
-            <h2>Nail Services Menu</h2>
+        <section id="nail-services" class="container">
+            
+            <div class="service-section">
+                <h3>Gel Polish (Natural Nails)</h3>
+                <p>💅 ₱450 (Starting Price)</p>
+            
+                <h3>Structured Gel Polish (BIAB or Hard Gel)</h3>
+                <p>✨ ₱550 (Natural Nails)</p>
+                <p>✨ ₱900 (With Extension)</p>
+            
+                <h3>Soft Gel Extension (Any Length)</h3>
+                <p>🌟 Plain – ₱800 (Starting Price)</p>
+                <p>🎨 Different Base Color – +₱50</p>
+            
+                <h3>Fill-In</h3>
+                <p>🔄 ₱600 (Starting Price)</p>
 
-            <h3>Gel Polish (Natural Nails)</h3>
-            <p>💅 ₱450 (Starting Price)</p>
-        
-            <h3>Structured Gel Polish (BIAB or Hard Gel)</h3>
-            <p>✨ ₱550 (Natural Nails)</p>
-            <p>✨ ₱900 (With Extension)</p>
-        
-            <h3>Soft Gel Extension (Any Length)</h3>
-            <p>🌟 Plain – ₱800 (Starting Price)</p>
-            <p>🎨 Different Base Color – +₱50</p>
-        
-            <h3>Fill-In</h3>
-            <p>🔄 ₱600 (Starting Price)</p>
-        
-            <h3>Nail Art Add-Ons (Per Nail or Per Piece)</h3>
-            <p>🎀 French Tip – ₱30</p>
-            <p>🎀 Double French Tip – ₱50</p>
-            <p>🌸 3D Flower / Fruits / Ribbons – ₱50-₱100</p>
-            <p>🎨 3D Swirl / 3D Dots – ₱5 per swirl</p>
-            <p>🌈 Ombre – ₱25 per nail</p>
-            <p>✨ Chrome – ₱30 per nail</p>
-            <p>🌟 Foil – ₱15 per nail</p>
-            <p>🖌 Simple Handpaint – ₱30 per nail</p>
-            <p>🎨 Intricate Handpaint – ₱50-₱300 per nail</p>
-            <p>✨ Glitters – ₱15 per nail</p>
-            <p>🌀 Marble – ₱20 per nail</p>
-            <p>📐 Outline / Shapes – ₱30 per nail</p>
-            <p>🐱 Magnetic Cateye – ₱30 per nail</p>
-            <p>💎 Encapsulation (Decorative Elements) – ₱40</p>
-        
-            <h3>Stones & Charms</h3>
-            <p>💎 Pearls & Rhinestones – ₱3-₱5</p>
-            <p>✨ Charms – ₱35-₱100 per piece</p>
-            <p>🎭 Stickers – ₱3-₱5</p>
-        
-            <h3>Removal Services</h3>
-            <p>💅 Gel Polish (My Work) – ₱100</p>
-            <p>💅 Gel Polish (Not My Work) – ₱150</p>
-            <p>🔄 Soft Gel Extension (My Work) – ₱150</p>
-            <p>🔄 Soft Gel Extension (Not My Work) – ₱250</p>
-
-            <div class="service-images">
-                <img src="ImagesAndStuff/Buildings.png" alt="Service 1" />
-                <img src="ImagesAndStuff/Diamonds.png" alt="Service 2" />
-                <img src="ImagesAndStuff/Flowers.png" alt="Service 3" />
-                <img src="ImagesAndStuff/Hearts.png" alt="Service 4" />
-                <img src="ImagesAndStuff/Hearts and Exs.png" alt="Service 4" />
-                <img src="ImagesAndStuff/Phone.jpg" alt="Service 5" />
-                <img src="ImagesAndStuff/Sun.png" alt="Service 6" />
-                <img src="ImagesAndStuff/Swirls.png" alt="Service 7" />
+                <h3>Removal Services</h3>
+                <p>💅 Gel Polish (My Work) – ₱100</p>
+                <p>💅 Gel Polish (Not My Work) – ₱150</p>
+                <p>🔄 Soft Gel Extension (My Work) – ₱150</p>
+                <p>🔄 Soft Gel Extension (Not My Work) – ₱250</p>
             </div>
 
-            <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
-                <span class="close" onclick="this.parentElement.style.display='none'">&times;</span>
-                <img class="lightbox-content" id="lightbox-img">
+            <div class="service-section">
+                <h3>Nail Art Add-Ons (Per Nail or Per Piece)</h3>
+                <p>🎀 French Tip – ₱30</p>
+                <p>🎀 Double French Tip – ₱50</p>
+                <p>🌸 3D Flower / Fruits / Ribbons – ₱50-₱100</p>
+                <p>🎨 3D Swirl / 3D Dots – ₱5 per swirl</p>
+                <p>🌈 Ombre – ₱25 per nail</p>
+                <p>✨ Chrome – ₱30 per nail</p>
+                <p>🌟 Foil – ₱15 per nail</p>
+                <p>🖌 Simple Handpaint – ₱30 per nail</p>
+                <p>🎨 Intricate Handpaint – ₱50-₱300 per nail</p>
+                <p>✨ Glitters – ₱15 per nail</p>
+                <p>🌀 Marble – ₱20 per nail</p>
+                <p>📐 Outline / Shapes – ₱30 per nail</p>
+                <p>🐱 Magnetic Cateye – ₱30 per nail</p>
+                <p>💎 Encapsulation (Decorative Elements) – ₱40</p>
+                <h3>Stones & Charms</h3>
+                <p>💎 Pearls & Rhinestones – ₱3-₱5</p>
+                <p>✨ Charms – ₱35-₱100 per piece</p>
+                <p>🎭 Stickers – ₱3-₱5</p>
+
+                <div class="service-images">
+                    <img src="ImagesAndStuff/Buildings.png" alt="Service 1" />
+                    <img src="ImagesAndStuff/Diamonds.png" alt="Service 2" />
+                    <img src="ImagesAndStuff/Flowers.png" alt="Service 3" />
+                    <img src="ImagesAndStuff/Hearts.png" alt="Service 4" />
+                    <img src="ImagesAndStuff/Hearts and Exs.png" alt="Service 4" />
+                    <img src="ImagesAndStuff/Phone.jpg" alt="Service 5" />
+                    <img src="ImagesAndStuff/Sun.png" alt="Service 6" />
+                    <img src="ImagesAndStuff/Swirls.png" alt="Service 7" />
+                </div>
+
+                <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+                    <span class="close" onclick="this.parentElement.style.display='none'">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                </div>
             </div>
         </section>
     </main>
-
-    
 
     <footer>
         <p>&copy; 2023 Sassy Station. All rights reserved.</p>
