@@ -11,6 +11,7 @@
         <div class="logo">
             <img src="ImagesAndStuff/Logo.png" alt="Sassy Station Logo">
         </div>
+
         <nav>
             <ul>
                 <li><a href="Sassy Station.html">Home</a></li>
@@ -24,6 +25,20 @@
             </ul>
         </nav>
     </header>
+
+    <div class="mobile-quick-links">
+        <div class="mobile-links-row">
+            <a href="Appointment.html">Book</a>
+            <a href="Services.html">Services</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Sassy Station.html#location">Location</a>
+        </div>
+        <div class="mobile-links-row">
+            <a href="Reviews.html">Reviews</a>
+            <a href="FAQS.html">FAQs</a>
+            <a href="Sassy Station.html#contact-us">Contact</a>
+        </div>
+    </div>
 
     <main>
         <div class="carousel">
@@ -40,30 +55,12 @@
 
         <section class="cta">
             <div class="gif-template">
-                <a href="Appointment.html"> 
-                    <img src="ImagesAndStuff/BookNow.gif" alt="Book Now Template"> 
-                    <div class="gif-text">BOOK NOW</div> 
+                <a href="Appointment.html">
+                    <img src="ImagesAndStuff/BookNow.gif" alt="Book Now Template">
+                    <div class="gif-text">BOOK NOW</div>
                 </a>
             </div>
         </section>
-
-        <script>
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.slide');
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.toggle('active', i === index);
-                });
-            }
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-        
-            setInterval(nextSlide, 3000);
-        
-            showSlide(currentSlide);
-        </script>
 
         <div class="location-container"> 
             <section class="map-view" id="location">
@@ -73,7 +70,7 @@
                     width="400" 
                     height="300" 
                     style="border:0;" 
-                    allowfullscreen="" 
+                    allowfullscreen=""
                     loading="lazy">
                 </iframe>
                 <div class="center-text">
@@ -106,5 +103,31 @@
         <p>&copy; 2023 Sassy Station. All rights reserved.</p>
         <ul><li><a href="#contact-us">Contact Us</a></li></ul>
     </footer>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        setInterval(nextSlide, 3000);
+        showSlide(currentSlide);
+        
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
