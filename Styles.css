@@ -11,8 +11,8 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    box-sizing: border-box; 
-    flex-wrap: wrap; 
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 .logo {
@@ -31,7 +31,7 @@ nav ul {
     margin: 0;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Allow wrapping */
     position: relative;
 }
 
@@ -44,8 +44,8 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #a03a5d;
-    font-size: 22px; 
-    font-weight: bold;
+    font-size: 22px; /* Increase font size */
+    font-weight: bold; /* Make font bold */
     padding: 10px;
 }
 
@@ -66,40 +66,41 @@ nav ul li:not(:last-child)::after {
 
 /* Menu toggle button - hidden by default */
 .menu-toggle {
-    display: none;
+    display: none; /* Hide the menu toggle button by default */
 }
+
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
+    .web-menu {
+        display: none; /* Hide the web-style menu on mobile */
+    }
+
     header {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
     }
 
     .logo {
-        margin: 0 auto 10px auto;
+        margin: 0 auto 10px auto; /* Center logo and add bottom margin */
     }
 
     /* Show and style the menu toggle */
     .menu-toggle {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        margin-bottom: 10px;
-        background-color: #f3b9c4;
-        color: #a03a5d;
-        font-weight: bold;
-        border-radius: 5px;
+        display: block; /* Show the menu toggle button */
         cursor: pointer;
         font-size: 24px;
+        color: #a03a5d;
+        margin: 10px;
+        text-align: center; /* Center the menu toggle button */
     }
 
     nav ul {
-        display: none; 
-        flex-direction: column; 
-        width: 100%; 
-        text-align: center; 
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Take full width */
+        text-align: center; /* Center items */
     }
 
     /* Show navigation when active class is applied */
@@ -112,8 +113,8 @@ nav ul li:not(:last-child)::after {
     }
 
     nav ul li a {
-        font-size: 18px; 
-        padding: 10px; 
+        font-size: 18px; /* Decrease font size for mobile */
+        padding: 10px; /* Adjust padding for mobile */
         display: block;
     }
 
@@ -142,6 +143,14 @@ nav ul li:not(:last-child)::after {
         border-radius: 15px;
         background-color: #f3b9c4;
     }
+
+    .container {
+        flex-direction: column; /* Stack containers vertically on mobile */
+    }
+
+    .service-images {
+        flex-direction: column; /* Stack images vertically on mobile */
+    }
 }
 
 .slider {
@@ -150,6 +159,63 @@ nav ul li:not(:last-child)::after {
     align-items: center;
     text-align: center;
     margin: 20px 0;
+}
+/* Update your web menu nav links to use the bubble style */
+nav.web-menu ul li a {
+    text-decoration: none;
+    color: #a03a5d;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #f3b9c4;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+nav.web-menu ul li a:hover {
+    transform: scale(1.05);
+}
+
+/* Remove the divider lines between nav items */
+nav.web-menu ul li:not(:last-child)::after {
+    content: none;
+}
+
+/* Add proper spacing between nav items */
+nav.web-menu ul li {
+    display: inline-block;
+    margin: 0 6px;
+    position: relative;
+}
+
+/* Fix the dropdown positioning with the new bubbles */
+nav.web-menu ul li .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffecf1;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 100;
+}
+
+nav.web-menu ul li:hover .dropdown {
+    display: block;
+}
+
+nav.web-menu ul li .dropdown li {
+    display: block;
+    margin: 8px 0;
+}
+
+/* Style for the dropdown arrow */
+nav.web-menu ul li .arrow {
+    cursor: pointer;
+    color: #a03a5d;
+    margin-left: 3px;
 }
 
 .slide {
@@ -565,21 +631,78 @@ line-height: 1.5;
 .service-images img:hover {
     transform: scale(1.1);
 }
+
+.container {
+    display: flex;
+    flex-direction: row; /* Display sections side by side */
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.center {
+    text-align: center;
+    color: #a03a5d; 
+}
+
+.service-section {
+    flex: 1; /* Allow sections to take equal space */
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.service-images img {
+    max-width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .lightbox {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .lightbox-content {
     margin: auto;
     display: block;
-    width: 80%; /* Width of the image */
-    max-width: 700px; /* Max width */
+    width: 80%;
+    max-width: 700px;
 }
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
