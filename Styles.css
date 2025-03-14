@@ -297,7 +297,7 @@ footer ul li a {
 }
 
 .social-icons img {
-    width: 40px;
+    width: 50px;
     height: auto;
     transition: transform 0.3s;
 }
@@ -317,8 +317,8 @@ footer ul li a {
     overflow: hidden;
 }
 .nail-services img {
-    width: 50%; /* Set the width to 50% of the parent container */
-    height: auto; /* Maintain aspect ratio */
+    width: 60%; 
+    height: auto;
 }
 
 .service-images {
