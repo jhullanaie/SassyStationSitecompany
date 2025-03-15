@@ -223,3 +223,12 @@
     }
     
 }
+
+.carousel-item h4 {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #a03a5d; /* Match the theme color */
+    font-weight: bold; /* Make it bold for emphasis */
+    margin-top: 10px; /* Add some space above the text */
+    margin-bottom: 0; /* Remove bottom margin if not needed */
+    font-family: 'Arial', sans-serif; /* Change to your preferred font family */
+}
