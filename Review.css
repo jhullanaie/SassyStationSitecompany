@@ -69,11 +69,18 @@
     right: 10px; 
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
+    main {
+        margin-top: 280px; /* Increased spacing for mobile */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .web-menu {
+        display: none; /* Hide the web-style menu on mobile */
     }
 
     header {
@@ -81,76 +88,138 @@
         top: 0;
         left: 0;
         width: 100%;
+        height: 150px;
         z-index: 1000;
         background-color: #f3b9c4;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Mobile Quick Links - 4-3 layout */
-    .mobile-quick-links {
         display: flex;
         flex-direction: column;
-        padding: 10px 0;
-        margin: 0;
-        background-color: #b52249;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    header .logo img {
+        max-height: 200px;
+    }
+
+    /* Menu toggle button */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #a03a5d;
+        margin: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+    }
+
+    nav ul li:not(:last-child)::after {
+        content: '';
+    }
+
+    /* Mobile quick links - exactly like portfolio page */
+    .mobile-quick-links {
         position: fixed;
         top: 150px;
         left: 0;
         width: 100%;
+        background-color: #ffecf1;
         z-index: 999;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
     }
-
+    
     .mobile-links-row {
         display: flex;
         justify-content: space-around;
         width: 100%;
         margin-bottom: 8px;
     }
-
+    
     .mobile-links-row:last-child {
         margin-bottom: 0;
-        justify-content: center;
     }
-
-    .mobile-quick-links a {
+    
+    /* First row (4 links) */
+    .mobile-links-row:nth-child(1) a {
         display: inline-block;
         padding: 8px 0;
+        width: 23%;
         text-align: center;
         color: #a03a5d;
         text-decoration: none;
         font-weight: bold;
-        background-color: #f3b9c4;
         border-radius: 15px;
+        background-color: #f3b9c4;
         font-size: 14px;
     }
-
-    .mobile-links-row:first-child a {
-        width: 23%;
+    
+    /* Second row (3 links) */
+    .mobile-links-row:nth-child(2) {
+        justify-content: center;
     }
-
-    .mobile-links-row:last-child a {
+    
+    .mobile-links-row:nth-child(2) a {
+        display: inline-block;
+        padding: 8px 0;
         width: 30%;
+        text-align: center;
+        color: #a03a5d;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 15px;
+        background-color: #f3b9c4;
+        font-size: 14px;
         margin: 0 5px;
     }
+    
+    /* Remove or comment out the duplicate main margin-top declaration later in the mobile section */
+    /* Add proper spacing for main content */
+    /* main {
+        margin-top: 210px;
+    } */
+    
+    /* Make reviews header properly positioned */
+    .reviews-header {
+        margin-top: 210px;
+    }
+}
 
-    /* Reviews specific mobile styles */
-    .reviews {
-        padding-top: 140px;
-        margin: 0;
+/* Desktop styles */
+@media only screen and (min-width: 769px) {
+    .mobile-quick-links {
+        display: none;
     }
 
-    .review-container {
-        margin: 10px;
-        padding: 15px;
+    .web-menu {
+        display: block;
     }
-
-    .carousel {
-        width: 95%;
-        margin: 10px auto;
-    }
-
-    .carousel-control {
-        padding: 8px;
-        font-size: 20px;
-    }
+    
 }

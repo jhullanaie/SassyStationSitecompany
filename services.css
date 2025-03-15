@@ -206,4 +206,14 @@ nav ul li a {
         width: calc(50% - 10px); /* Make images take up roughly 1/2 of container width on mobile */
         max-width: none;
     }
+
+    .logo {
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    header .logo img {
+        max-height: 150px;
+    }
+
 }
