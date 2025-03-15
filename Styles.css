@@ -1,6 +1,6 @@
 body {
     font-family: Verdana, sans-serif;
-    background-color: #f8d9e3;
+    background-color: #f7e9ec;
     margin: 0;
 }
 
@@ -516,7 +516,6 @@ line-height: 1.5;
     text-align: center;
     margin-top: 10px; 
 }
-    /* Mobile Quick Links - stacked 4-up, 3-below */
 .mobile-quick-links {
     display: none;
 }
