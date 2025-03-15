@@ -60,7 +60,6 @@
     margin-bottom: 20px;
 }
 
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     main {
@@ -68,9 +67,7 @@
         margin-left: 20px;
         margin-right: 20px;
     }
-}
 
-@media (max-width: 768px) {
     .web-menu {
         display: none; /* Hide the web-style menu on mobile */
     }
@@ -110,14 +107,14 @@
     }
 
     nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Take full width */
+        text-align: center; /* Center items */
     }
 
     nav ul.active {
-        display: flex;
+        display: flex; /* Show navigation when active class is applied */
     }
 
     nav ul li {
@@ -125,16 +122,12 @@
     }
 
     nav ul li a {
-        font-size: 18px;
-        padding: 10px;
+        font-size: 18px; /* Decrease font size for mobile */
+        padding: 10px; /* Adjust padding for mobile */
         display: block;
     }
 
-    nav ul li:not(:last-child)::after {
-        content: '';
-    }
-
-    /* Mobile quick links - exactly like portfolio page */
+    /* Mobile quick links */
     .mobile-quick-links {
         position: fixed;
         top: 150px;
@@ -147,18 +140,18 @@
         flex-direction: column;
         margin-bottom: 0;
     }
-    
+
     .mobile-links-row {
         display: flex;
         justify-content: space-around;
         width: 100%;
         margin-bottom: 8px;
     }
-    
-    .mobile-links-row:last-child {
+
+    /* .mobile-links-row:last-child {
         margin-bottom: 0;
     }
-    
+
     /* First row (4 links) */
     .mobile-links-row:nth-child(1) a {
         display: inline-block;
@@ -172,12 +165,12 @@
         background-color: #f3b9c4;
         font-size: 14px;
     }
-    
+
     /* Second row (3 links) */
     .mobile-links-row:nth-child(2) {
         justify-content: center;
     }
-    
+
     .mobile-links-row:nth-child(2) a {
         display: inline-block;
         padding: 8px 0;
@@ -191,13 +184,7 @@
         font-size: 14px;
         margin: 0 5px;
     }
-    
-    /* Remove or comment out the duplicate main margin-top declaration later in the mobile section */
-    /* Add proper spacing for main content */
-    /* main {
-        margin-top: 210px;
-    } */
-    
+
     /* Make reviews header properly positioned */
     .reviews-header {
         margin-top: 210px;
@@ -213,4 +200,12 @@
     .web-menu {
         display: block;
     }
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+}
+
+.dropdown.active {
+    display: block; /* Show dropdown when active */
 }
